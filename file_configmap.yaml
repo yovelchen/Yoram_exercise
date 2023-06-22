@@ -1,0 +1,27 @@
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: my-app-content
+  labels:
+    app: my-app
+data:
+  index.html: |
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <meta charset="utf-8">
+        <title>FlaskApp</title>
+        <link rel="stylesheet" href="main.css">
+      </head>
+      <body>
+        <h1>Hello from my ConfigMap!</h1>
+        <h2>Welcome to FlaskApp!</h2>
+      </body>
+    </html>
+  main.css: |
+    body {
+      background-color: rgb(224,224,224);
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+      font-size: 100%;
+    }
